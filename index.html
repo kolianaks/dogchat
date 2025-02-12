@@ -6,17 +6,18 @@
     <title>DogChat</title>
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
-    <link rel="stylesheet" href="./style.css">  <!-- ✅ Use ./ for CSS -->
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div class="chat-container">
+        <div class="chat-header">DogChat</div>
         <div class="messages" id="messages"></div>
         <div class="input-group">
             <input type="text" id="messageInput" placeholder="Type a message...">
-            <button onclick="sendMessage()">Send</button>
+            <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
         </div>
     </div>
-
-    <script src="./script.js"></script> <!-- ✅ Use ./ for JavaScript -->
+    <script src="./script.js"></script>
 </body>
 </html>
