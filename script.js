@@ -16,3 +16,12 @@ function sendMessage() {
         document.getElementById('messageInput').value = '';
     }
 }
+firebase.auth().onAuthStateChanged(user => {
+    const currentPage = window.location.pathname;
+
+    if (user && currentPage !== "/chat.html") {
+        window.location.href = 'chat.html'; // Redirect only from signup/login
+    } else if (!user && currentPage === "/chat.html") {
+        window.location.href = 'signup.html'; // Redirect guests to signup
+    }
+});
