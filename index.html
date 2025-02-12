@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DogChat - Welcome</title>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+</head>
+<body>
+    <script>
+        // Redirect based on authentication state
+        firebase.auth().onAuthStateChanged(user => {
+            if (user) {
+                window.location.href = 'chat.html'; // Redirect logged-in users to chat
+            } else {
+                window.location.href = 'signup.html'; // Redirect guests to signup
+            }
+        });
+    </script>
+</body>
+</html>
